@@ -3,21 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>-| TRELLIS WORK |- </title>
+    <title>TRELLIS WORK</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="code.css">
+    <script src="script.js" async></script>
   </head>
   <body>
     <h1 id="pageTitle">TRELLIS/WORK</h1>
     <main>
       <div class="card">
-	<h2>About this site</h2>
-	<p class="description">
+	<h2>About</h2>
+	<div class="description">
 	  Hello.<br>
-	  This <span class="keyword">is</span> personal hosting site <span class="keyword">for</span>
-	  <strong class="string">&quot;Cofork.&quot;</strong><br>
-	</p>
-	<a href="/cgit">Browse Repository</a>
+	  This <span class="keyword">is</span> personal website
+	  <span class="keyword">for</span> <span class="ident">cofork</span>.<br>
+	  I've used another name online but it's difficult to be pronounced so I
+	  changed while not many people know the name.<br>
+	  I'll use this site only to host my personal project
+	  <span class="keyword">not</span> so important
+	  <span class="keyword">as</span> I create repository on
+	  <span class="ident">GitHub</span> for the time being.<br>
+	  <span id="more" class="more">More</span>
+	  <div id="omitted" class="omit">
+	    Activities in about <span class="integer">3</span> years were mainly done on
+	    <span class="ident">Chronoscope</span>. If you're interested
+	    <span class="keyword">in</span> them, please
+	    visit <span class="string">&quot;chronoscoper.com&quot;</span>.<br>
+	  </div>
+	</div>
+	<hr>
+	<a href="/cgit/">Browse Repository with cgit</a>
       </div>
       <div class="card">
 	<h2>Further Reference</h2>
@@ -39,8 +54,10 @@
       </div>
     </main>
     <footer class="description">
-      &copy; 2019, Koki Fukuda&lt;ko.fu.dev (at) gmail.com&gt;<br>
-      Contents but noted are available under the condition of CC BY-SA
+      &copy; 2019, Koki Fukuda&lt;ko.fu.dev (at) gmail.com&gt;
+      <div id="footerNote">
+	Contents but noted are available under the condition of CC BY-SA.
+      </div>
     </footer>
   </body>
 </html>

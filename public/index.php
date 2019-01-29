@@ -39,7 +39,7 @@
 	<a href="https://twitter.com/man_2_fork">Twitter</a><br>
       </div>
       <div class="card">
-	<h2>Clone this site with Git</h2>
+	<h2>Clone this site using Git</h2>
 	<pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
       </div>
       <?php if (isset($_GET['debug'])): ?>

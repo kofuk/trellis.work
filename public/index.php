@@ -44,8 +44,16 @@
       </div>
       <?php if (isset($_GET['debug'])): ?>
       <div class="card">
+        <?php
+         $sql = strtolower($_GET['debug']);
+         $has_sql_input = preg_match('@^(select (.+ )?from|delete from).@', $sql) === 1
+         ?>
         <?php if ($_GET['debug'] === ''): ?>
-        PHP Notice:  Uninitialized string offset: 5 in /home/web/public/util/sql_endpoint.php on line 25
+        debug sql is not set
+        Notice:  Uninitialized string offset: 5 in /home/web/public/util/sql_endpoint.php on line 25
+        <?php elseif ($has_sql_input): ?>
+        Thank you for playing game! This is a fake bug haha.<br>
+        I sincerely respect you for the knowledge for Web.
         <?php else: ?>
         string(0) ""
         <?php endif ?>

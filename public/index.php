@@ -42,6 +42,15 @@
 	<h2>Clone this site with Git</h2>
 	<pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
       </div>
+      <?php if (isset($_GET['debug'])): ?>
+      <div class="card">
+        <?php if ($_GET['debug'] === ''): ?>
+        PHP Notice:  Uninitialized string offset: 5 in /home/web/public/util/sql_endpoint.php on line 25
+        <?php else: ?>
+        string(0) ""
+        <?php endif ?>
+      </div>
+      <?php endif ?>
     </main>
     <footer class="description">
       &copy; 2019, Koki Fukuda&lt;ko.fu.dev (at) gmail.com&gt;

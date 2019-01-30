@@ -1,15 +1,11 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>TRELLIS WORK</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="code.css">
-    <script src="script.js" async></script>
-  </head>
+<?php
+require __DIR__ . '/../php-util/util.php';
+doctype ();
+html ();
+head ();
+?>
   <body>
-    <h1 id="pageTitle">TRELLIS/WORK</h1>
+    <?php page_title (); ?>
     <main>
       <div class="card">
 	<h2>About</h2>
@@ -42,6 +38,14 @@
 	<h2>Clone this site using Git</h2>
 	<pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
       </div>
+      <div class="card">
+        <h2>Articles</h2>
+        <ul>
+          <li>
+            <a href="/articles/start-emacs-with-systemd.php">Start Emacs with Systemd</a>
+          </li>
+        </ul>
+      </div>
       <?php if (isset($_GET['debug'])): ?>
       <div class="card">
         <?php
@@ -60,11 +64,6 @@
       </div>
       <?php endif ?>
     </main>
-    <footer class="description">
-      &copy; 2019, Koki Fukuda&lt;ko.fu.dev (at) gmail.com&gt;
-      <div id="footerNote">
-	Contents but noted are available under the condition of CC BY-SA.
-      </div>
-    </footer>
+    <?php footer (); ?>
   </body>
 </html>

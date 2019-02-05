@@ -29,7 +29,7 @@ function head (string $title = NULL)
     }
     $type = rand (0, 1);
 ?>
-<head>
+<head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title><?= $title ?></title>
@@ -38,15 +38,20 @@ function head (string $title = NULL)
   ?>
   <link rel="stylesheet" href="/style-modern.css">
   <link rel="stylesheet" href="/code-modern.css">
+  <meta name="theme-color" content="#000000">
   <?php
   else:
   ?>
   <link rel="stylesheet" href="/style-legacy.css">
   <link rel="stylesheet" href="/code-legacy.css">
+  <meta name="theme-color" content="#ffff99">
   <?php
   endif
   ?>
+  <link rel="icon" href="/images/icon_192.png" sizes="192x192">
   <script src="/script.js" async></script>
+  <meta property="og:title" content="<?= $title ?>">
+  <meta property="og:image" content="/images/icon_192.png">
 </head>
 <?php
 }

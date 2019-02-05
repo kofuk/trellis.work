@@ -1,0 +1,12 @@
+.keyword {
+    color: rgb(230, 130, 0);
+}
+.string {
+    color: rgb(10, 50, 255);
+}
+.ident {
+    color: rgb(10, 200, 20);
+}
+.integer {
+    color: rgb(255, 10, 100);
+}

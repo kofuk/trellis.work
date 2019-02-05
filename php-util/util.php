@@ -27,13 +27,25 @@ function head (string $title = NULL)
         global $GLOBAL_TITLE;
         $title =  $GLOBAL_TITLE;
     }
+    $type = rand (0, 1);
 ?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title><?= $title ?></title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/code.css">
+  <?php
+  if ($type === 0):
+  ?>
+  <link rel="stylesheet" href="/style-modern.css">
+  <link rel="stylesheet" href="/code-modern.css">
+  <?php
+  else:
+  ?>
+  <link rel="stylesheet" href="/style-legacy.css">
+  <link rel="stylesheet" href="/code-legacy.css">
+  <?php
+  endif
+  ?>
   <script src="/script.js" async></script>
 </head>
 <?php

@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/../php-util/util.php';
+set_global_title ("KoFuk - TRELLIS WORK");
 doctype ();
 html ();
 head ();

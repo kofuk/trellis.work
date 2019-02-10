@@ -1,11 +1,18 @@
 <?php
-
+$SITE_NAME = 'TRELLIS WORK';
 $GLOBAL_TITLE = 'TRELLIS WORK';
+$SITE_DESC = '';
 
 function set_global_title (string $title)
 {
     global $GLOBAL_TITLE;
     $GLOBAL_TITLE = $title;
+}
+
+function set_description (string $description)
+{
+        global $SITE_DESC;
+        $SITE_DESC = $description;
 }
 
 function doctype ()
@@ -22,6 +29,8 @@ function html (string $lang = 'en')
 
 function head (string $title = NULL)
 {
+    global $SITE_NAME;
+    global $SITE_DESC;
     if ($title === NULL)
     {
         global $GLOBAL_TITLE;
@@ -50,8 +59,21 @@ function head (string $title = NULL)
   ?>
   <link rel="icon" href="/images/icon_192.png" sizes="192x192">
   <script src="/script.js" async></script>
+  <?php
+  if ($SITE_DESC !== ''):
+  ?>
+  <meta name="description" content="<?= $SITE_DESC ?>">
+  <meta property="og:description" content="<?= $SITE_DESC ?>">
+  <meta property="twitter:description" content="<?= $SITE_DESC ?>">
+  <?php
+  endif
+  ?>
+  <meta property="og:site_name" content="<?= $SITE_NAME ?>">
   <meta property="og:title" content="<?= $title ?>">
-  <meta property="og:image" content="/images/icon_192.png">
+  <meta property="og:image" content="/images/me.png">
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:title" content="<?= $title ?>">
+  <meta property="twitter:site" content="@man_2_fork">
 </head>
 <?php
 }

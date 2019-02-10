@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/../php-util/util.php';
 set_global_title ("KoFuk - TRELLIS WORK");
+set_description ("Personal website for KoFuk. I'll put git repository for my tiny project or write article about what I interested.");
 doctype ();
 html ();
 head ();

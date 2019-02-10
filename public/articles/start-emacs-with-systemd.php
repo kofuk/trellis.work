@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/../../php-util/util.php';
 set_global_title ('Start Emacs with Systemd - TRELLIS WORK');
+set_description ("Starting at Emacs 23, Emacs provides functionally to run Emacs as daemon. In this page, I'll introduce you to the way to start Emacs when GNU/Linux systems boot up.");
 doctype ();
 html ();
 head ();
@@ -16,7 +17,6 @@ head ();
         Fortunately, Systemd allows us to add start up script without having
         root priviledge.<br>
         I did it on my Debian 9 and Emacs that I built by myself.<br>
-        OK, let's start.<br>
         Create directory <code>~/.config/systemd/user</code> if not exists
         and write following code to file named <code>emacs.service</code>
         <pre><code>[Unit]

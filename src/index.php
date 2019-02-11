@@ -63,6 +63,9 @@ head ();
           <li>
             <a href="/articles/start-emacs-with-systemd.html">Systemd で Emacs を起動する</a>
           </li>
+          <li>
+            <a href="/articles/updated-website.html">ウェブサイトをいじった話</a>
+          </li>
         </ul>
       </div>
     </main>

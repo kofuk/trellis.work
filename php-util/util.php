@@ -20,7 +20,7 @@ function doctype ()
     echo '<!doctype html>';
 }
 
-function html (string $lang = 'en')
+function html (string $lang = 'ja')
 {
 ?>
 <html lang="<?= $lang; ?>">
@@ -115,7 +115,7 @@ function footer ()
 <footer class="description">
   &copy; 2019, Koki Fukuda&lt;ko.fu.dev (at) gmail.com&gt;
   <div id="footerNote">
-      Contents but noted are available under the condition of CC BY-SA.
+       特に記載がない場合はページの内容は CC BY-SA の条件で使用可能です。
   </div>
 </footer>
 <?php

@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    line-height: 1;
+    line-height: auto;
 }
 
 #pageTitle {
@@ -38,7 +38,6 @@ div.card {
 
 .description {
     font-family: monospace;
-    font-size: 120%;
 }
 
 .omit {
@@ -64,7 +63,7 @@ a::before {
     content: "»";
 }
 
-.console {
+pre, .console {
     background-color: #021b21;
     padding: 10px;
     opacity: .8;

@@ -27,38 +27,39 @@ function html (string $lang = 'en')
 <?php
 }
 
+$INLINE_CSS = [];
+$INLINE_JS = [];
+
+function add_inline_css (string $name)
+{
+        global $INLINE_CSS;
+        array_push ($INLINE_CSS, $name);
+}
+
+function add_inline_js (string $name)
+{
+        global $INLINE_JS;
+        array_push ($INLINE_JS, $name);
+}
+
 function head (string $title = NULL)
 {
     global $SITE_NAME;
     global $SITE_DESC;
+    global $INLINE_CSS;
+    global $INLINE_JS;
     if ($title === NULL)
     {
         global $GLOBAL_TITLE;
         $title =  $GLOBAL_TITLE;
     }
-    $type = rand (0, 1);
 ?>
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title><?= $title ?></title>
-  <?php
-  if ($type === 0):
-  ?>
-  <link rel="stylesheet" href="/style-modern.css">
-  <link rel="stylesheet" href="/code-modern.css">
-  <meta name="theme-color" content="#000000">
-  <?php
-  else:
-  ?>
-  <link rel="stylesheet" href="/style-legacy.css">
-  <link rel="stylesheet" href="/code-legacy.css">
   <meta name="theme-color" content="#ffff99">
-  <?php
-  endif
-  ?>
   <link rel="icon" href="/images/icon_192.png" sizes="192x192">
-  <script src="/script.js" async></script>
   <?php
   if ($SITE_DESC !== ''):
   ?>
@@ -74,6 +75,24 @@ function head (string $title = NULL)
   <meta property="twitter:card" content="summary">
   <meta property="twitter:title" content="<?= $title ?>">
   <meta property="twitter:site" content="@man_2_fork">
+  <style>
+  <?php
+  foreach ($INLINE_CSS as $f):
+  ?>
+  <?= file_get_contents ("inline-res/$f") ?>
+  <?php
+  endforeach
+  ?>
+  </style>
+  <script>
+  <?php
+  foreach ($INLINE_JS as $f):
+  ?>
+  <?= file_get_contents ("inline-res/$f") ?>
+  <?php
+  endforeach
+  ?>
+  </script>
 </head>
 <?php
 }

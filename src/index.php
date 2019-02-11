@@ -1,5 +1,8 @@
 <?php
-require __DIR__ . '/../php-util/util.php';
+require 'php-util/util.php';
+add_inline_css ('style.css');
+add_inline_css ('code.css');
+add_inline_js ('index_expansion.js');
 set_global_title ("KoFuk - TRELLIS WORK");
 set_description ("Personal website for KoFuk. I'll put git repository for my tiny project or write article about what I interested.");
 doctype ();
@@ -48,23 +51,6 @@ head ();
           </li>
         </ul>
       </div>
-      <?php if (isset($_GET['debug'])): ?>
-      <div class="card">
-        <?php
-         $sql = strtolower($_GET['debug']);
-         $has_sql_input = preg_match('@^(select (.+ )?from|delete from).@', $sql) === 1
-         ?>
-        <?php if ($_GET['debug'] === ''): ?>
-        debug sql is not set
-        Notice:  Uninitialized string offset: 5 in /home/web/public/util/sql_endpoint.php on line 25
-        <?php elseif ($has_sql_input): ?>
-        Thank you for playing game! This is a fake bug haha.<br>
-        I sincerely respect you for the knowledge for Web.
-        <?php else: ?>
-        string(0) ""
-        <?php endif ?>
-      </div>
-      <?php endif ?>
     </main>
     <?php footer (); ?>
   </body>

@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . '/../../php-util/util.php';
+require 'php-util/util.php';
+add_inline_css ('style.css');
 set_global_title ('Start Emacs with Systemd - TRELLIS WORK');
 set_description ("Starting at Emacs 23, Emacs provides functionally to run Emacs as daemon. In this page, I'll introduce you to the way to start Emacs when GNU/Linux systems boot up.");
 doctype ();

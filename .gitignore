@@ -1,2 +1,4 @@
-public/.well-known/
+public/
+_public/
+public.old/
 *~

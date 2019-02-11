@@ -9,10 +9,13 @@ mkdir _public
 )
 
 # Put static files
-cp -r static/* _public
+cp -r src/static/* _public
 
 # Put preprocessed PHP files
-cat preprocess_list | xargs -d '\n' ./preprocess.sh
+(
+    cd src/
+    cat ../preprocess_list | xargs -d '\n' ../preprocess.sh
+)
 
 if [ -d public/ ]; then
     mv public public.old/

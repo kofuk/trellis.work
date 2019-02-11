@@ -45,6 +45,17 @@ head ();
 	<a href="/cgit/">cgit でリポジトリを見る</a>
       </div>
       <div class="card">
+        <h2>記事ども</h2>
+        <ul>
+          <li>
+            <a href="/articles/start-emacs-with-systemd.html">Systemd で Emacs を起動する</a>
+          </li>
+          <li>
+            <a href="/articles/updated-website.html">ウェブサイトをいじった話</a>
+          </li>
+        </ul>
+      </div>
+      <div class="card">
 	<h2>リンク</h2>
 	<a href="https://github.com/kofuk">GitHub</a><br>
 	<a href="https://qiita.com/kofuk">Qiita</a><br>
@@ -56,17 +67,6 @@ head ();
         最適化厨になったりカスタマイズ厨になったりするので実際にサーブできるようになるまで
         面倒臭くなったりします。<br>
         しかし、cgit に HTTP 経由で clone させる機能がついてるってこと、実際に clone してみて初めて気づきました。
-      </div>
-      <div class="card">
-        <h2>記事ども</h2>
-        <ul>
-          <li>
-            <a href="/articles/start-emacs-with-systemd.html">Systemd で Emacs を起動する</a>
-          </li>
-          <li>
-            <a href="/articles/updated-website.html">ウェブサイトをいじった話</a>
-          </li>
-        </ul>
       </div>
     </main>
     <?php footer (); ?>

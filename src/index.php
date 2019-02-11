@@ -47,7 +47,7 @@ head ();
         <h2>Articles</h2>
         <ul>
           <li>
-            <a href="/articles/start-emacs-with-systemd.php">Start Emacs with Systemd</a>
+            <a href="/articles/start-emacs-with-systemd.html">Start Emacs with Systemd</a>
           </li>
         </ul>
       </div>

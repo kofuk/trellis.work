@@ -12,7 +12,7 @@ head ();
     <?php page_title ('TRELLIS WORK'); ?>
     <main>
       <div class="card">
-	<h2>このサイトについて</h2>
+	<h2>ABOUT</h2>
 	<div class="description">
 	  こんにちは。<br>
 	  このサイトは KoFuk の個人的なウェブサイトです。<br>
@@ -42,27 +42,37 @@ head ();
 	  </div>
 	</div>
 	<hr>
-	<a href="/cgit/">cgit でリポジトリを見る</a>
+	<a href="/cgit/" class="link-inline">cgit でリポジトリを見る</a>
       </div>
       <div class="card">
-        <h2>記事ども</h2>
-        <ul>
-          <li>
-            <a href="/articles/start-emacs-with-systemd.html">Systemd で Emacs を起動する</a>
-          </li>
-          <li>
-            <a href="/articles/updated-website.html">ウェブサイトをいじった話</a>
-          </li>
-        </ul>
+        <h2>ARTICLES</h2>
+        <?php
+        $articles_json = file_get_contents ("articles/articles.json");
+        if ($articles_json === FALSE)
+        {
+                exit (1);
+        }
+        $articles = json_decode ($articles_json, TRUE);
+        foreach ($articles as $article)
+        {
+        ?>
+            <a href="<?= $article['to'] ?>" class="article-list-link">
+              <div class="article-list-item">
+                <?= htmlspecialchars ($article['title']) ?>
+              </div>
+            </a>
+        <?php
+        }
+        ?>
+     </div>
+      <div class="card">
+	<h2>LINKS</h2>
+	<a href="https://github.com/kofuk" class="link-inline">GitHub</a><br>
+	<a href="https://qiita.com/kofuk" class="link-inline">Qiita</a><br>
+	<a href="https://twitter.com/man_2_fork" class="link-inline">Twitter</a><br>
       </div>
       <div class="card">
-	<h2>リンク</h2>
-	<a href="https://github.com/kofuk">GitHub</a><br>
-	<a href="https://qiita.com/kofuk">Qiita</a><br>
-	<a href="https://twitter.com/man_2_fork">Twitter</a><br>
-      </div>
-      <div class="card">
-	<h2>Git でこのサイトを clone する</h2>
+	<h2>CLONE WITH GIT</h2>
 	<pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
         最適化厨になったりカスタマイズ厨になったりするので実際にサーブできるようになるまで
         面倒臭くなったりします。<br>

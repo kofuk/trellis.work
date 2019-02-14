@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Systemd で Emacs を起動する",
+        "to": "/articles/start-emacs-with-systemd.html"
+    },
+    {
+        "title": "ウェブサイトをいじった話",
+        "to": "/articles/updated-website.html"
+    }
+]

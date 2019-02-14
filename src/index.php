@@ -1,6 +1,7 @@
 <?php
 require 'php-util/util.php';
 add_inline_css ('style.css');
+add_inline_css ('index.css');
 add_inline_js ('index_expansion.js');
 set_global_title ("KoFuk - TRELLIS WORK");
 set_description ("KoFuk の個人的なウェブサイトです。小さい個人的なプロジェクトの Git リポジトリを置いたり、すこしずつ記事を書いたりしています。");
@@ -55,6 +56,10 @@ head ();
         $articles = json_decode ($articles_json, TRUE);
         foreach ($articles as $article)
         {
+                if (!isset ($article['title'], $article['to']))
+                {
+                        exit (1);
+                }
         ?>
             <a href="<?= $article['to'] ?>" class="article-list-link">
               <div class="article-list-item">
@@ -65,13 +70,7 @@ head ();
         }
         ?>
      </div>
-      <div class="card">
-	<h2>LINKS</h2>
-	<a href="https://github.com/kofuk" class="link-inline">GitHub</a><br>
-	<a href="https://qiita.com/kofuk" class="link-inline">Qiita</a><br>
-	<a href="https://twitter.com/man_2_fork" class="link-inline">Twitter</a><br>
-      </div>
-      <div class="card">
+     <div class="card">
 	<h2>CLONE WITH GIT</h2>
 	<pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
         最適化厨になったりカスタマイズ厨になったりするので実際にサーブできるようになるまで
@@ -79,6 +78,17 @@ head ();
         しかし、cgit に HTTP 経由で clone させる機能がついてるってこと、実際に clone してみて初めて気づきました。
       </div>
     </main>
+    <div id="social-section">
+      <a href="https://github.com/kofuk">
+        <?php inline_png ('github.png', ['class'=>'social-logo', 'title'=>'GitHub']) ?>
+      </a>
+      <a href="https://twitter.com/man_2_fork">
+        <?php inline_png ('twitter.png', ['class'=>'social-logo', 'title'=>'Twitter']) ?>
+      </a>
+      <a href="https://qiita.com/kofuk">
+        <?php inline_png ('qiita.png', ['class'=>'social-logo', 'title'=>'Qiita']) ?>
+      </a>
+    </div>
     <?php footer (); ?>
   </body>
 </html>

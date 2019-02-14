@@ -120,3 +120,25 @@ function footer ()
 </footer>
 <?php
 }
+
+function inline_png (string $name, $attrs = NULL)
+{
+        $src = file_get_contents ("inline-res/images/$name");
+        if ($src === FALSE)
+        {
+                exit (1);
+        }
+?>
+        <img src="data:image/png;base64,<?= base64_encode ($src) ?>"
+<?php
+        if ($attrs !== NULL)
+        {
+                foreach ($attrs as $k => $v)
+                {
+                        echo "{$k}=\"{$v}\" ";
+                }
+        }
+?>
+        >
+<?php
+}

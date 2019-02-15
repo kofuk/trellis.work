@@ -5,19 +5,19 @@ doctype ();
 html ();
 head ();
 ?>
-  <body>
+<body>
     <?php page_title (); ?>
     <main>
-      <div class="card">
-      <?php
-        if (!isset ($ARTICLE_FILENAME))
-        {
-                exit (1);
-        }
-        include $ARTICLE_FILENAME;
-      ?>
-      </div>
+        <div class="card">
+            <?php
+                if (!isset ($ARTICLE_FILENAME))
+                {
+                    exit (1);
+                }
+                include $ARTICLE_FILENAME;
+            ?>
+        </div>
     </main>
     <?php footer (); ?>
-  </body>
+</body>
 </html>

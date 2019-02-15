@@ -1,5 +1,4 @@
 <?php
-require_once 'php-util/util.php';
 add_inline_css ('style.css');
 add_inline_css ('code.css');
 doctype ();

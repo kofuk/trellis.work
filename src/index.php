@@ -1,5 +1,4 @@
 <?php
-require 'php-util/util.php';
 add_inline_css ('style.css');
 add_inline_css ('index.css');
 add_inline_js ('index_expansion.js');

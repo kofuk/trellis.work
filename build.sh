@@ -17,6 +17,9 @@ cp -r src/static/* _public
     ../preprocess.sh
 )
 
+# Minify *.html under _public/
+find _public/ -name '*.html' -not -name 'googlecae95843b0249a37.html' | xargs ./minify.py
+
 if [ -d public/ ]; then
     mv public public.old/
 fi

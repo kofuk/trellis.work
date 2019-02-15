@@ -11,19 +11,21 @@ function set_global_title (string $title)
 
 function set_description (string $description)
 {
-        global $SITE_DESC;
-        $SITE_DESC = $description;
+    global $SITE_DESC;
+    $SITE_DESC = $description;
 }
 
 function doctype ()
 {
-    echo '<!doctype html>';
+?>
+    <!doctype html>
+<?php
 }
 
 function html (string $lang = 'ja')
 {
 ?>
-<html lang="<?= $lang; ?>">
+    <html lang="<?= $lang; ?>">
 <?php
 }
 
@@ -32,14 +34,14 @@ $INLINE_JS = [];
 
 function add_inline_css (string $name)
 {
-        global $INLINE_CSS;
-        array_push ($INLINE_CSS, $name);
+    global $INLINE_CSS;
+    array_push ($INLINE_CSS, $name);
 }
 
 function add_inline_js (string $name)
 {
-        global $INLINE_JS;
-        array_push ($INLINE_JS, $name);
+    global $INLINE_JS;
+    array_push ($INLINE_JS, $name);
 }
 
 function head (string $title = NULL)
@@ -53,46 +55,44 @@ function head (string $title = NULL)
         global $GLOBAL_TITLE;
         $title =  $GLOBAL_TITLE;
     }
-?>
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title><?= $title ?></title>
-  <meta name="theme-color" content="#ffff99">
-  <link rel="icon" href="/images/icon_192.png" sizes="192x192">
-  <?php
-  if ($SITE_DESC !== ''):
-  ?>
-  <meta name="description" content="<?= $SITE_DESC ?>">
-  <meta property="og:description" content="<?= $SITE_DESC ?>">
-  <meta property="twitter:description" content="<?= $SITE_DESC ?>">
-  <?php
-  endif
-  ?>
-  <meta property="og:site_name" content="<?= $SITE_NAME ?>">
-  <meta property="og:title" content="<?= $title ?>">
-  <meta property="og:image" content="/images/me.png">
-  <meta property="twitter:card" content="summary">
-  <meta property="twitter:title" content="<?= $title ?>">
-  <meta property="twitter:site" content="@man_2_fork">
-  <style>
-  <?php
-  foreach ($INLINE_CSS as $f):
-  ?>
-  <?= file_get_contents ("inline-res/$f") ?>
-  <?php
-  endforeach
-  ?>
-  </style>
-  <script>
-  <?php
-  foreach ($INLINE_JS as $f):
-  ?>
-  <?= file_get_contents ("inline-res/$f") ?>
-  <?php
-  endforeach
-  ?>
-  </script>
+    ?>
+    <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><?= $title ?></title>
+    <meta name="theme-color" content="#ffff99">
+    <link rel="icon" href="/images/icon_192.png" sizes="192x192">
+<?php if ($SITE_DESC !== ''): ?>
+    <meta name="description" content="<?= $SITE_DESC ?>">
+    <meta property="og:description" content="<?= $SITE_DESC ?>">
+    <meta property="twitter:description" content="<?= $SITE_DESC ?>">
+<?php endif ?>
+<meta property="og:site_name" content="<?= $SITE_NAME ?>">
+<meta property="og:title" content="<?= $title ?>">
+<meta property="og:image" content="/images/me.png">
+<meta property="twitter:card" content="summary">
+<meta property="twitter:title" content="<?= $title ?>">
+<meta property="twitter:site" content="@man_2_fork">
+<?php if (count ($INLINE_CSS) > 0): ?>
+<style>
+<?php
+foreach ($INLINE_CSS as $f):
+    echo file_get_contents ("inline-res/$f");
+endforeach
+    ?>
+</style>
+<?php endif ?>
+<?php if (count ($INLINE_JS) > 0): ?>
+<script>
+<?php
+foreach ($INLINE_JS as $f):
+    ?>
+<?= file_get_contents ("inline-res/$f") ?>
+<?php
+endforeach
+    ?>
+</script>
+<?php endif ?>
 </head>
 <?php
 }

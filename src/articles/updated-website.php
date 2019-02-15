@@ -1,5 +1,4 @@
 <?php
-require 'php-util/util.php';
 require 'php-util/article.php';
 set_global_title ('ウェブサイトをいじった話 - TRELLIS WORK');
 set_description ('ウェブサイトをいじった結果良くなったことと辛くなったことについて書きます。');

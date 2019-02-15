@@ -4,8 +4,8 @@ set -eu
 process(){
     local src=$1
     local dst=$2
-    echo "$src => $dst"
-    php "$src" > "../_public/$dst"
+    echo "Preprocessing: $src => $dst"
+    php loader.php "$src" > "../_public/$dst"
 }
 
 process index.php index.html

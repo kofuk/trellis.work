@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 set -eu
-for f in "$@"; do
-    src=$(echo "$f" | awk '{print $1}')
-    dist=$(echo "$f" | awk '{print $2}')
-    echo "$src => $dist"
-    php "$src" > "../_public/$dist"
-done
+
+process(){
+    local src=$1
+    local dst=$2
+    echo "$src => $dst"
+    php "$src" > "../_public/$dst"
+}
+
+process index.php index.html
+process articles/start-emacs-with-systemd.php articles/start-emacs-with-systemd.html
+process articles/updated-website.php articles/updated-website.html
+

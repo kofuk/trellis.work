@@ -14,7 +14,7 @@ cp -r src/static/* _public
 # Put preprocessed PHP files
 (
     cd src/
-    cat ../preprocess_list | xargs -d '\n' ../preprocess.sh
+    ../preprocess.sh
 )
 
 if [ -d public/ ]; then

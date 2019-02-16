@@ -51,6 +51,31 @@ img.social-logo:hover {
     margin-right: 10px;
 }
 
+h2.has-expand-thumb::after {
+    position: static;
+    text-align: right;
+    float: right;
+    font-size: 60%;
+    bottom: 0;
+    color: #00aaaa;
+}
+
+h2.has-expand-thumb[data-expanded="no"]::after {
+    content: '開く↓';
+}
+
+h2.has-expand-thumb[data-expanded="yes"]::after {
+    content: '閉じる↑';
+}
+
+h2.has-expand-thumb + div {
+    display: block;
+}
+
+h2.has-expand-thumb[data-expanded='no'] + div {
+    display: none;
+}
+
 @media screen and (min-width: 900px) {
     footer {
         float: left;

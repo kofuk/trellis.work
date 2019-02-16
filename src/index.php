@@ -45,32 +45,36 @@ head ();
         <a href="/cgit/" class="link-inline">cgit でリポジトリを見る</a>
     </div>
     <div class="card">
-        <h2>ARTICLES</h2>
-        <?php
-            $articles_json = file_get_contents ("articles/articles.json");
-            if ($articles_json === FALSE)
-            {
-                exit (1);
-            }
-            $articles = json_decode ($articles_json, TRUE);
-            foreach ($articles as $article):
-                if (!isset ($article['title'], $article['to'])):
+        <h2 class="has-expand-thumb" data-expanded="no">BLOG POSTS</h2>
+        <div>
+            <?php
+                $articles_json = file_get_contents ("articles/articles.json");
+                if ($articles_json === FALSE)
+                {
                     exit (1);
-                endif
-        ?>
-        <a href="<?= $article['to'] ?>" class="article-list-link">
-            <div class="article-list-item">
-                <?= htmlspecialchars ($article['title']) ?>
-            </div>
-        </a>
-        <?php endforeach ?>
+                }
+                $articles = json_decode ($articles_json, TRUE);
+                foreach ($articles as $article):
+                    if (!isset ($article['title'], $article['to'])):
+                        exit (1);
+                    endif
+            ?>
+            <a href="<?= $article['to'] ?>" class="article-list-link">
+                <div class="article-list-item">
+                    <?= htmlspecialchars ($article['title']) ?>
+                </div>
+            </a>
+            <?php endforeach ?>
+        </div>
     </div>
     <div class="card">
-        <h2>CLONE WITH GIT</h2>
-        <pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
-        最適化厨になったりカスタマイズ厨になったりするので実際にサーブできるようになるまで
-        面倒臭くなったりします。<br>
-        しかし、cgit に HTTP 経由で clone させる機能がついてるってこと、実際に clone してみて初めて気づきました。
+        <h2 class="has-expand-thumb" data-expanded="no">CLONE WITH GIT</h2>
+        <div>
+            <pre class="console">$ git clone https://trellis.work/cgit/trellis.work.git</pre>
+            最適化厨になったりカスタマイズ厨になったりするので実際にサーブできるようになるまで
+            面倒臭くなったりします。<br>
+            しかし、cgit に HTTP 経由で clone させる機能がついてるってこと、実際に clone してみて初めて気づきました。
+        </div>
     </div>
 </main>
 <div id="social-section">

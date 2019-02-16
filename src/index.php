@@ -87,6 +87,12 @@ head ();
     <a href="https://qiita.com/kofuk">
         <?php inline_png ('qiita.png', ['class'=>'social-logo', 'title'=>'Qiita']) ?>
     </a>
+    <a href="https://ja.stackoverflow.com/users/17162/kofuk">
+        <?php inline_png ('stackoverflow.png', ['class'=>'social-logo', 'title'=>'Stack Overflow']) ?>
+    </a>
+    <a href="https://mstdn.jp/@kofuk">
+        <?php inline_png ('mastodon.png', ['class'=>'social-logo', 'title'=>'Mastodon']) ?>
+    </a>
 </div>
 <?php footer (); ?>
 </body>

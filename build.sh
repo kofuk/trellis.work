@@ -9,7 +9,7 @@ mkdir _public
 )
 
 # Put static files
-cp -r src/static/* _public
+cp -r src/static/* _public/
 
 # Put preprocessed PHP files
 (

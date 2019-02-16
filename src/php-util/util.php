@@ -60,7 +60,7 @@ function head (string $title = NULL)
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= $title ?></title>
-    <meta name="theme-color" content="#ffff99">
+    <meta name="theme-color" content="#303030">
     <link rel="icon" href="/images/icon_192.png" sizes="192x192">
     <?php if ($SITE_DESC !== ''): ?>
         <meta name="description" content="<?= $SITE_DESC ?>">

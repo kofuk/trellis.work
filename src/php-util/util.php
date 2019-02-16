@@ -73,6 +73,7 @@ function head (string $title = NULL)
     <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="<?= $title ?>">
     <meta property="twitter:site" content="@man_2_fork">
+    <link rel="manifest" href="/manifest.json">
     <?php if (count ($INLINE_CSS) > 0): ?>
         <style>
             <?php

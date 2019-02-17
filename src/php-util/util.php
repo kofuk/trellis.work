@@ -83,7 +83,7 @@ function head (string $title = NULL)
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= $title ?></title>
     <meta name="theme-color" content="#303030">
-    <link rel="icon" href="<?= asset ('icons/icon_192.png') ?>" sizes="192x192">
+    <link rel="icon" href="<?= asset ('images/icon_192.png') ?>" sizes="192x192">
     <?php if ($SITE_DESC !== ''): ?>
         <meta name="description" content="<?= $SITE_DESC ?>">
         <meta property="og:description" content="<?= $SITE_DESC ?>">

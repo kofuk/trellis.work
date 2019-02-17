@@ -2,6 +2,28 @@
 $SITE_NAME = 'TRELLIS WORK';
 $GLOBAL_TITLE = 'TRELLIS WORK';
 $SITE_DESC = '';
+$LOCAL = TRUE;
+
+function set_type (string $type)
+{
+    global $LOCAL;
+    if ($type === '--local')
+    {
+        $LOCAL = TRUE;
+    }
+    else
+    {
+        $LOCAL = FALSE;
+    }
+}
+
+function asset (string $name)
+{
+    global $LOCAL;
+    return $LOCAL
+        ?"/assets/$name"
+        :"https://assets.trellis.work/$name";
+}
 
 function set_global_title (string $title)
 {
@@ -61,7 +83,7 @@ function head (string $title = NULL)
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= $title ?></title>
     <meta name="theme-color" content="#303030">
-    <link rel="icon" href="/images/icon_192.png" sizes="192x192">
+    <link rel="icon" href="<?= asset ('icons/icon_192.png') ?>" sizes="192x192">
     <?php if ($SITE_DESC !== ''): ?>
         <meta name="description" content="<?= $SITE_DESC ?>">
         <meta property="og:description" content="<?= $SITE_DESC ?>">
@@ -69,7 +91,7 @@ function head (string $title = NULL)
     <?php endif ?>
     <meta property="og:site_name" content="<?= $SITE_NAME ?>">
     <meta property="og:title" content="<?= $title ?>">
-    <meta property="og:image" content="/images/me.png">
+    <meta property="og:image" content="<?= asset ('images/me.png') ?>">
     <meta property="twitter:card" content="summary">
     <meta property="twitter:title" content="<?= $title ?>">
     <meta property="twitter:site" content="@man_2_fork">

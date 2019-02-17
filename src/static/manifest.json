@@ -3,17 +3,17 @@
     "name": "TRELLIS WORK",
     icons: [
         {
-            "src": "/images/icon_48.png",
+            "src": "https://assets.trellis.work/icons/icon_48.png",
             "type": "image/png",
             "sizes": "48x48"
         },
         {
-            "src": "/images/icon_96.png",
+            "src": "https://assets.trellis.work/icons/icon_96.png",
             "type": "image/png",
             "sizes": "96x96"
         },
         {
-            "src": "/images/icon_196.png",
+            "src": "https://assets.trellis.work/icons/icon_196.png",
             "type": "image/png",
             "sizes": "196x196"
         },

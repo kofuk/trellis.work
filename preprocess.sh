@@ -5,7 +5,7 @@ process(){
     local src=$1
     local dst=$2
     echo "Preprocessing: $src => $dst"
-    php loader.php "$src" > "../_public/$dst"
+    php loader.php "$BUILD_TYPE_OPTION" "$src" > "../_public/$dst"
 }
 
 process index.php index.html

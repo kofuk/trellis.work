@@ -81,6 +81,7 @@ function head (string $title = NULL)
 ?>
     <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
+    <meta name="dns-prefetch" content="//fonts.gstatic.com">
     <?php if (!$LOCAL): ?>
         <meta name="dns-prefetch" content="//assets.trellis.work">
     <?php endif ?>

@@ -4,7 +4,7 @@ add_inline_css ('index.css');
 add_inline_css ('https://fonts.googleapis.com/css?family=Poiret+One');
 add_inline_js ('index_expansion.js');
 set_global_title ("KoFuk - TRELLIS WORK");
-set_description ("KoFuk の個人的なウェブサイトです。小さい個人的なプロジェクトの Git リポジトリを置いたり、すこしずつ記事を書いたりしています。");
+set_description ("KoFuk の個人的なウェブサイトです。小さい個人的なプロジェクトの Git リポジトリやブログなどをホストしたり、ソフトウェアの実験 (これがメイン) に使っています。");
 doctype ();
 html ();
 head ();
@@ -22,7 +22,7 @@ head ();
             <span id="more" class="more">もっと見る</span>
             <div id="omitted">
                 ここ 3 年間は主に Chronoscope というグループを作って活動していたので、もし、興味がおありでしたら
-                chronoscoper.com をご覧ください。<br>
+                <a href="https://www.chronoscoper.com" class="inline">プロジェクトのウェブサイト</a> をご覧ください。<br>
                 で、折角「もっと見る」みたいな機能つけてここで終わりというのもどうかと思うんですよ。
                 私がこのドメインを取った経緯について少しここに書きたいと思います。<br>
                 ある日私はある日本のレジストラのサイトを訪れたんですね。これは既に取得していた他のドメインの管理を

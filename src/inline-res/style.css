@@ -4,6 +4,10 @@ html, body {
     line-height: normal;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 #pageTitle {
     position: sticky;
     top: 0;
@@ -40,6 +44,16 @@ div.card {
     border: solid 2px rgba(255, 255, 255, .5);
 }
 
+a.inline {
+    color: #eeee75;
+    border-bottom: dotted 1px #eeee75;
+    text-decoration: none;
+}
+
+a.inline:hover {
+    border-bottom: solid 1px #eeee75;
+}
+
 hr {
     border: none;
 }
@@ -61,4 +75,13 @@ footer {
 #footerNote {
     padding: 5px;
     opacity: .6;
+}
+
+#topThumb {
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    background-color: #eeee75;
+    color: black;
+    padding: 10px;
 }

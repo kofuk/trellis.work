@@ -111,7 +111,6 @@ function head (string $title = NULL)
                 ?>
                 <?= file_get_contents ($fname) ?>
             <?php endforeach ?>
-            ?>
         </style>
     <?php endif ?>
     <?php if (count ($INLINE_JS) > 0): ?>
@@ -151,6 +150,7 @@ function footer ()
             特に記載がない場合はページの内容は CC BY-SA の条件で使用可能です。
         </div>
     </footer>
+    <a href="#"><div id="topThumb">BACK TO TOP</div></a>
 <?php
 }
 

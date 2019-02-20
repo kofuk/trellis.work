@@ -72,6 +72,7 @@ function head (string $title = NULL)
     global $SITE_DESC;
     global $INLINE_CSS;
     global $INLINE_JS;
+    global $LOCAL;
     if ($title === NULL)
     {
         global $GLOBAL_TITLE;
@@ -80,6 +81,9 @@ function head (string $title = NULL)
 ?>
     <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
+    <?php if (!$LOCAL): ?>
+        <meta name="dns-prefetch" content="//assets.trellis.work">
+    <?php endif ?>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= $title ?></title>
     <meta name="theme-color" content="#303030">

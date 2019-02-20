@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-set -eu
+set -eux
+
+echo_bold(){
+    echo -e "\\033[1m$1\\033[0m"
+}
+
 if [ "$#" -ne 1 ]; then
     echo '--product or --local must be specified' >&2
 fi
@@ -11,13 +16,16 @@ mkdir _public
 mkdir "$assets_path"
 
 # Create directory structure
+echo_bold 'Create directory structure'
 mkdir _public/articles
 
 # Put static files
+echo_bold 'Put static files'
 cp -r src/static/* _public/
 cp -r src/cdn-assets/* "$assets_path"
 
 # Put preprocessed PHP files
+echo_bold 'Put processed PHP files'
 (
     cd src/
     export BUILD_TYPE_OPTION="$1"
@@ -25,6 +33,7 @@ cp -r src/cdn-assets/* "$assets_path"
 )
 
 # Minify *.html under _public/
+echo_bold 'Minify *.html under _public'
 find _public/ -type d -name 'assets' -prune -o -name '*.html' \
      -not -name 'googlecae95843b0249a37.html' -print | \
     xargs ./minify.py

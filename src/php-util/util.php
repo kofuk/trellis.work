@@ -117,11 +117,15 @@ function head (string $title = NULL)
         <script>
             <?php foreach ($INLINE_JS as $f): ?>
                 <?php
-                    $fname = preg_match ('@^https?://@', $f) === 1
-                        ?$f
-                        :"inline-res/$f";
+                    if (preg_match ('@^https?://@', $f) === 1)
+                    {
+                        echo file_get_contents ($f);
+                    }
+                    else
+                    {
+                        passthru ("java -jar ../bin/closure-compiler.jar inline-res/$f");
+                    }
                 ?>
-                <?= file_get_contents ($fname) ?>
             <?php endforeach ?>
         </script>
     <?php endif ?>

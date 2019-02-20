@@ -6,6 +6,10 @@
     color: rgb(210, 30, 40);
 }
 
+#omitted {
+    display: none;
+}
+
 a.link-inline {
     margin-left: 20px;
     color: rgb(255, 240, 240);

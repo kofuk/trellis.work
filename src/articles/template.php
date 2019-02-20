@@ -1,6 +1,7 @@
 <?php
 add_inline_css ('style.css');
 add_inline_css ('code.css');
+add_inline_css ('https://fonts.googleapis.com/css?family=Poiret+One');
 doctype ();
 html ();
 head ();

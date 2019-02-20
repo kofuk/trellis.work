@@ -102,17 +102,26 @@ function head (string $title = NULL)
     <link rel="manifest" href="/manifest.json">
     <?php if (count ($INLINE_CSS) > 0): ?>
         <style>
-            <?php
-                foreach ($INLINE_CSS as $f):
-                    echo file_get_contents ("inline-res/$f");
-                endforeach
+            <?php foreach ($INLINE_CSS as $f): ?>
+                <?php
+                    $fname = preg_match ('@^https?://@', $f) === 1
+                        ?$f
+                        :"inline-res/$f";
+                ?>
+                <?= file_get_contents ($fname) ?>
+            <?php endforeach ?>
             ?>
         </style>
     <?php endif ?>
     <?php if (count ($INLINE_JS) > 0): ?>
         <script>
             <?php foreach ($INLINE_JS as $f): ?>
-                <?= file_get_contents ("inline-res/$f") ?>
+                <?php
+                    $fname = preg_match ('@^https?://@', $f) === 1
+                        ?$f
+                        :"inline-res/$f";
+                ?>
+                <?= file_get_contents ($fname) ?>
             <?php endforeach ?>
         </script>
     <?php endif ?>
@@ -136,7 +145,7 @@ function footer ()
 {
 ?>
     <footer class="description">
-        &copy; 2019, Koki Fukuda&lt;ko.fu.dev (at) gmail.com&gt;
+        &copy; 2019, Koki Fukuda
         <div id="footerNote">
             特に記載がない場合はページの内容は CC BY-SA の条件で使用可能です。
         </div>

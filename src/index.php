@@ -1,6 +1,7 @@
 <?php
 add_inline_css ('style.css');
 add_inline_css ('index.css');
+add_inline_css ('https://fonts.googleapis.com/css?family=Poiret+One');
 add_inline_js ('index_expansion.js');
 set_global_title ("KoFuk - TRELLIS WORK");
 set_description ("KoFuk の個人的なウェブサイトです。小さい個人的なプロジェクトの Git リポジトリを置いたり、すこしずつ記事を書いたりしています。");
@@ -19,7 +20,7 @@ head ();
             このサイトは当分の間、GitHub に置くまでもないくらい小さな (完成するかも分らない)
             プロジェクトの Git リポジトリを置くのに使うつもりです。
             <span id="more" class="more">もっと見る</span>
-            <div id="omitted" class="omit">
+            <div id="omitted">
                 ここ 3 年間は主に Chronoscope というグループを作って活動していたので、もし、興味がおありでしたら
                 chronoscoper.com をご覧ください。<br>
                 で、折角「もっと見る」みたいな機能つけてここで終わりというのもどうかと思うんですよ。
@@ -78,6 +79,9 @@ head ();
     </div>
 </main>
 <div id="social-section">
+    <a href="mailto:ko.fu.dev+website@gmail.com">
+        <?php inline_png ('email.png', ['class'=>'social-logo', 'title'=>'Mail']) ?>
+    </a>
     <a href="https://github.com/kofuk">
         <?php inline_png ('github.png', ['class'=>'social-logo', 'title'=>'GitHub']) ?>
     </a>

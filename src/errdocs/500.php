@@ -1,6 +1,6 @@
 <?php
-add_inline_css ('style.css');
-add_inline_css ('index.css');
+add_inline_css ('style.scss');
+add_inline_css ('index.scss');
 set_global_title ("Internal Server Error - TRELLIS WORK");
 doctype ();
 html ();

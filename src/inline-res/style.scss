@@ -8,6 +8,14 @@ body {
     scroll-behavior: smooth;
 }
 
+a {
+    -webkit-tap-highlight-color: transparent;
+    font-weight: normal;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
 #pageTitle {
     position: sticky;
     top: 0;
@@ -20,7 +28,7 @@ body {
 body {
     font-family: sans-serif;
     color: white;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(40, 40, 40);
     background-image:
         linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px);
@@ -49,10 +57,9 @@ a.inline {
     color: #eeee75;
     border-bottom: dotted 1px #eeee75;
     text-decoration: none;
-}
-
-a.inline:hover {
-    border-bottom: solid 1px #eeee75;
+    &:hover {
+        border-bottom: solid 2px #eeee75;
+    }
 }
 
 hr {
@@ -85,4 +92,7 @@ footer {
     background-color: #eeee75;
     color: black;
     padding: 10px;
+    &:hover {
+        background-color: #ffcc64;
+    }
 }

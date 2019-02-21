@@ -1,6 +1,6 @@
 <?php
-add_inline_css ('style.css');
-add_inline_css ('index.css');
+add_inline_css ('style.scss');
+add_inline_css ('index.scss');
 add_inline_css ('https://fonts.googleapis.com/css?family=Poiret+One');
 add_inline_js ('index_expansion.js');
 set_global_title ("KoFuk - TRELLIS WORK");

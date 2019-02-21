@@ -1,9 +1,9 @@
 .PHONY: build-local
-build-local:
+build-local: extract-sass
 	./build.sh --local
 
 .PHONY: build-product
-build-product:
+build-product: extract-sass
 	./build.sh --product
 
 .PHONY: product
@@ -16,6 +16,11 @@ product: build-product
 .PHONY: serve
 serve: build-local
 	cd public && python3 -m http.server
+
+.PHONY: extract-sass
+extract-sass:
+	mkdir -p tmp
+	tar -xf lib/dart-sass-linux-x64.tar.gz -C tmp
 
 .PHONY: clean
 clean:

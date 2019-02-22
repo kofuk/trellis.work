@@ -1,1 +1,16 @@
 TRELLIS.WORK
+============
+
+# Dependencies
+
+Trellis.work requires following software to be built. (Alphabetical order)
+
+- Bash
+- Closure Compiler (BUNDLED)
+- GNU Make
+- htmlmin (Python)
+- Java
+- PHP (7.0 or newer)
+- pygment (Python)
+- Python 3
+- sass (BUNDLED)

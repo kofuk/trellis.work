@@ -66,6 +66,17 @@ function add_inline_js (string $name)
     array_push ($INLINE_JS, $name);
 }
 
+function safe_passthru (string $cmd)
+{
+    $ret;
+    passthru ($cmd, $ret);
+    if ($ret !== 0)
+    {
+        fwrite (STDERR, "Failed to execute command: {$cmd}\nexit code: {$ret}");
+        exit (1);
+    }
+}
+
 function head (string $title = NULL)
 {
     global $SITE_NAME;
@@ -109,12 +120,11 @@ function head (string $title = NULL)
             {
                 if (preg_match ('@^https?://@', $f) === 1)
                 {
-                    passthru ("bash -c '../tmp/dart-sass/sass -s compressed <(curl $f)'");
-                    //echo file_get_contents ($f);
+                    safe_passthru ("bash -c '../tmp/dart-sass/sass -s compressed <(curl $f)'");
                 }
                 else
                 {
-                    passthru ("../tmp/dart-sass/sass -s compressed inline-res/$f");
+                    safe_passthru ("../tmp/dart-sass/sass -s compressed inline-res/$f");
                 }
             }
             echo '</style>';
@@ -130,7 +140,7 @@ function head (string $title = NULL)
                 }
                 else
                 {
-                    passthru ("java -jar ../bin/closure-compiler.jar inline-res/$f");
+                    safe_passthru ("java -jar ../bin/closure-compiler.jar inline-res/$f");
                 }
             }
             echo '</script>';

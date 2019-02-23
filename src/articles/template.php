@@ -17,6 +17,8 @@ head ();
                 }
                 include $ARTICLE_FILENAME;
             ?>
+        <hr>
+            最終更新: <?= $LAST_MOD ?>
         </div>
     </main>
     <?php footer (); ?>

@@ -1,1 +1,4 @@
 Sitemap: https://trellis.work/sitemap.xml
+
+User-agent: *
+Disallow: /cgit/

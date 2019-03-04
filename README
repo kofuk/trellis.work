@@ -14,3 +14,17 @@ Trellis.work requires following software to be built. (Alphabetical order)
 - pygment (Python)
 - Python 3
 - sass (BUNDLED)
+
+# License
+
+All files are licensed under CC BY-SA except for ones noted below.
+
+- Closure Compiler (Apache 2.0)
+https://github.com/google/closure-compiler
+
+- sass (MIT)
+https://github.com/sass/dart-sass
+dart-sass includes Dart runtime which is licensed under BSD-3-clause license.
+
+- Modified version of pygments' CSS (BSD)
+https://bitbucket.org/birkenfeld/pygments-main

@@ -4,7 +4,7 @@ add_inline_css ('index.scss');
 add_inline_css ('https://fonts.googleapis.com/css?family=Poiret+One');
 add_inline_js ('index_expansion.js');
 set_global_title ("KoFuk - TRELLIS WORK");
-set_description ("KoFuk の個人的なウェブサイトです。小さい個人的なプロジェクトの Git リポジトリやブログなどをホストしたり、ソフトウェアの実験 (これがメイン) に使っています。");
+set_description ("KoFuk の個人的なウェブサイトです。");
 doctype ();
 html ();
 head ();
@@ -42,8 +42,6 @@ head ();
                 癪に障るって人はあまり期待しないでください……。
             </div>
         </div>
-        <hr>
-        <a href="/cgit/" class="link-inline">cgit でリポジトリを見る</a>
     </div>
     <div class="card">
         <h2 class="has-expand-thumb" data-expanded="no">BLOG POSTS</h2>

@@ -4,7 +4,7 @@ include 'php-util/die-on-error.php';
 
 if (count ($argv) !== 2)
 {
-    echo 'Type and Filename must be given.';
+    echo 'Filename must be given.';
     exit (1);
 }
 

@@ -1,10 +1,10 @@
 .PHONY: all
 all: tmp/dart-sass/dart-sass
 	mkdir -p public/articles
-	$(MAKE) -C src -f Docs.mk
-	$(MAKE) -C src/static -f Docs.mk
+	$(MAKE) -C src all
+	$(MAKE) -C src/static all
 	mkdir -p assets/images
-	$(MAKE) -C src/cdn-assets -f Docs.mk
+	$(MAKE) -C src/cdn-assets all
 
 tmp/dart-sass/dart-sass: lib/dart-sass-linux-x64.tar.gz
 	mkdir -p tmp

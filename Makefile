@@ -6,9 +6,10 @@ all: tmp/dart-sass/dart-sass
 	mkdir -p assets/images
 	$(MAKE) -C src/cdn-assets -f Docs.mk
 
-tmp/dart-sass/dart-sass:
+tmp/dart-sass/dart-sass: lib/dart-sass-linux-x64.tar.gz
 	mkdir -p tmp
 	tar -xf lib/dart-sass-linux-x64.tar.gz -C tmp
+	touch tmp/dart-sass/dart-sass  # to nofify make of correct updated time
 
 .PHONY: serve
 serve: all

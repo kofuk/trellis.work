@@ -6,10 +6,15 @@ ERROR_DOCS := $(PREFIX)/403.html $(PREFIX)/404.html $(PREFIX)/500.html
 .PHONY: all
 all: $(REGULAR_PAGES) $(ERROR_DOCS)
 
-$(PREFIX)/%.html: %.php
+$(PREFIX)/%.html: %.php loader.php $(PWD)/minify.py php-util/util.php
 	php loader.php --product $< > $@
 	$(PWD)/minify.py $@
 
-$(PREFIX)/%.html: errdocs/%.php
+$(PREFIX)/articles/%.html: articles/%.php loader.php $(PWD)/minify.php php-util/util.php \
+		articles/template.php php-util/article.php
+	php loader.php --product $< $@
+	$(PWD)/minify.py $@
+
+$(PREFIX)/%.html: errdocs/%.php loader.php $(PWD)/minify.py php-util/util.php
 	php loader.php --product $< > $@
 	$(PWD)/minify.py $@

@@ -2,27 +2,10 @@
 $SITE_NAME = 'TRELLIS WORK';
 $GLOBAL_TITLE = 'TRELLIS WORK';
 $SITE_DESC = '';
-$LOCAL = TRUE;
-
-function set_type (string $type)
-{
-    global $LOCAL;
-    if ($type === '--local')
-    {
-        $LOCAL = TRUE;
-    }
-    else
-    {
-        $LOCAL = FALSE;
-    }
-}
 
 function asset (string $name)
 {
-    global $LOCAL;
-    return $LOCAL
-        ?"/assets/$name"
-        :"https://assets.trellis.work/$name";
+    return "https://assets.trellis.work/$name";
 }
 
 function set_global_title (string $title)
@@ -83,7 +66,6 @@ function head (string $title = NULL)
     global $SITE_DESC;
     global $INLINE_CSS;
     global $INLINE_JS;
-    global $LOCAL;
     if ($title === NULL)
     {
         global $GLOBAL_TITLE;
@@ -93,9 +75,7 @@ function head (string $title = NULL)
     <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
     <meta name="dns-prefetch" content="//fonts.gstatic.com">
-    <?php if (!$LOCAL): ?>
-        <meta name="dns-prefetch" content="//assets.trellis.work">
-    <?php endif ?>
+    <meta name="dns-prefetch" content="//assets.trellis.work">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><?= $title ?></title>
     <meta name="theme-color" content="#303030">
@@ -146,7 +126,6 @@ function head (string $title = NULL)
             echo '</script>';
         }
     ?>
-<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poiret+One">-->
     </head>
 <?php
 }

@@ -23,8 +23,8 @@ const initExpansion = () => {
     };
 }
 
-onload = () => {
+addEventListener('load', () => {
     'use strict';
     initExpansion();
     initCardExpansion();
-}
+});

@@ -36,23 +36,6 @@ a.link-inline {
     color: white;
 }
 
-img.social-logo {
-    width: 32px;
-    height: 32px;
-    opacity: .5;
-    transition: all .3s;
-    margin-right: 10px;
-}
-
-img.social-logo:hover {
-    opacity: 1;
-}
-
-#social-section {
-    text-align: right;
-    margin-right: 10px;
-}
-
 h2.has-expand-thumb {
     background-color: rgba(255, 255, 255, 0);
     transition: background-color .3s;
@@ -90,14 +73,4 @@ h2.has-expand-thumb + div {
 
 h2.has-expand-thumb[data-expanded='no'] + div {
     display: none;
-}
-
-@media screen and (min-width: 900px) {
-    footer {
-        float: left;
-    }
-
-    #social-section {
-        float: right;
-    }
 }

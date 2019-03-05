@@ -1,0 +1,52 @@
+[
+    {
+        "file": "index.php",
+        "type": "regular",
+        "page_title": "KoFuk - TRELLIS WORK",
+        "nav_title": "TRELLIS WORK",
+        "description": "KoFukの個人的なWebページです。",
+        "style_sheets": ["index.scss"],
+        "scripts": ["index_expansion.js"]
+    },
+    {
+        "file": "articles/start-emacs-with-systemd.php",
+        "type": "article",
+        "page_title": "SystemdでEmacsを起動する - TRELLIS WORK",
+        "description": "Emacs 23 から、Emacsにはデーモンモードが搭載されています。この記事ではEmacsを、GNU/Linuxシステムの起動と同時にデーモンとして起動する方法を説明します。",
+        "lastmod": "2019/02/11",
+        "style_sheets": ["code.scss"]
+    },
+    {
+        "file": "articles/updated-website.php",
+        "type": "article",
+        "page_title": "ウェブサイトをいじった話 - TRELLIS WORK",
+        "description": "ウェブサイトをいじった結果良くなったことと辛くなったことについて書きます。",
+        "lastmod": "2019/02/11"
+    },
+    {
+        "file": "articles/bc.php",
+        "type": "article",
+        "page_title": "感動的なストーリー - TRELLIS WORK",
+        "description": "私が今日体験した感動的なストーリーについて書きました。",
+        "lastmod": "2019/03/05",
+        "scripts": ["bc.js"]
+    },
+    {
+        "file": "errdocs/403.php",
+        "type": "regular",
+        "page_title": "Forbidden - TRELLIS WORK",
+        "description": "N/A"
+    },
+    {
+        "file": "errdocs/404.php",
+        "type": "regular",
+        "page_title": "Not Found - TRELLIS WORK",
+        "description": "N/A"
+    },
+    {
+        "file": "errdocs/500.php",
+        "type": "regular",
+        "page_title": "Internal Server Error - TRELLIS WORK",
+        "description": "N/A"
+    }
+]

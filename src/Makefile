@@ -13,6 +13,7 @@ all: $(REGULAR_PAGES) $(ERROR_DOCS)
 
 $(PREFIX)/index.html: $(CURDIR)/index.php $(DEPENDENCY_ALL) articles/articles.json inline-res/index_expansion.js inline-res/index.scss
 	php loader.php $< > $@
+	$(PWD)/minify.py $@
 
 $(PREFIX)/%.html: $(CURDIR)/%.php $(DEPENDENCY_ALL)
 	php loader.php $< > $@

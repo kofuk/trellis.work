@@ -1,6 +1,12 @@
 <div class="card">
     <h2>ABOUT</h2>
-    <div class="description">
+    <div id="about-avatar">
+        <img
+            data-src="https://assets.trellis.work/images/icon_192.png"
+            data-delayed="true"
+            id="avatar">
+    </div>
+    <div class="description" id="about-description">
         こんにちは。<br>
         このサイトは KoFuk の個人的なウェブサイトです。
         <span id="more" class="more">もっと見る</span>
@@ -14,7 +20,7 @@
     </div>
 </div>
 <div class="card">
-    <h2 class="has-expand-thumb" data-expanded="no">BLOG POSTS</h2>
+    <h2>BLOG POSTS</h2>
     <div>
         <?php
             $articles_json = file_get_contents ("articles/articles.json");

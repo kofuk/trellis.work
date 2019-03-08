@@ -2,6 +2,28 @@
     font-family: monospace;
 }
 
+#about-avatar {
+    float: left;
+}
+
+#about-description {
+    float: left;
+}
+
+#avatar {
+    margin-right: 20px;
+    height: 192px;
+    width: 192px;
+}
+
+h2 {
+    clear: left;
+}
+
+div.card {
+    overflow: auto;
+}
+
 .more {
     color: rgb(210, 30, 40);
 }

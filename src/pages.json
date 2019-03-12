@@ -9,6 +9,12 @@
         "scripts": ["index_expansion.js", "img_delay.js"]
     },
     {
+        "file": "trash.php",
+        "type": "regular",
+        "page_title": "ごみ箱 - TRELLIS WORK",
+        "description": "適当に作ったものを置く場所です。現時点では空っぽかもしれませんしごみがあふれているかもしれません。"
+    },
+    {
         "file": "articles/start-emacs-with-systemd.php",
         "type": "article",
         "page_title": "SystemdでEmacsを起動する - TRELLIS WORK",

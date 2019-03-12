@@ -41,6 +41,14 @@
     </div>
 </div>
 <div class="card">
+    <h2>TRASH CAN</h2>
+    <div>
+        ごみ箱です。適当に作ったものなどを載せようと思います。
+        不定期で焼却処分される可能性があります。<br>
+        <a href="/trash.html" class="inline">ごみ箱をあさる</a>
+    </div>
+</div>
+<div class="card">
     <h2 class="has-expand-thumb" data-expanded="no">CLONE WITH GIT</h2>
     <div>
         <pre class="console">$ git clone https://github.com/kofuk/trellis.work.git</pre>

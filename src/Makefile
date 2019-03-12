@@ -1,6 +1,6 @@
 PREFIX := $(PWD)/public
 REGULAR_PAGES := $(PREFIX)/index.html $(PREFIX)/articles/start-emacs-with-systemd.html \
-$(PREFIX)/articles/updated-website.html $(PREFIX)/articles/bc.html
+$(PREFIX)/articles/updated-website.html $(PREFIX)/articles/bc.html $(PREFIX)/trash.html
 ERROR_DOCS := $(PREFIX)/403.html $(PREFIX)/404.html $(PREFIX)/500.html
 DEPENDENCY_ALL := loader.php $(PWD)/minify.py php-util/util.php inline-res/style.scss
 

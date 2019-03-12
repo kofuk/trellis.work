@@ -23,23 +23,21 @@
     <h2>BLOG POSTS</h2>
     <div>
         <?php
-            $articles_json = file_get_contents ("articles/articles.json");
-            if ($articles_json === FALSE)
-            {
+        $articles_json = file_get_contents ("articles/articles.json");
+        if ($articles_json === FALSE)
+            exit (1);
+        $articles = json_decode ($articles_json, TRUE);
+        foreach ($articles as $article)
+        {
+            if (!isset ($article['title'], $article['to']))
                 exit (1);
-            }
-            $articles = json_decode ($articles_json, TRUE);
-            foreach ($articles as $article):
-                if (!isset ($article['title'], $article['to'])):
-                    exit (1);
-                endif
         ?>
         <a href="<?= $article['to'] ?>" class="article-list-link">
             <div class="article-list-item">
                 <?= htmlspecialchars ($article['title']) ?>
             </div>
         </a>
-        <?php endforeach ?>
+        <?php } ?>
     </div>
 </div>
 <div class="card">

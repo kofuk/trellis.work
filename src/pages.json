@@ -38,6 +38,13 @@
         "scripts": ["bc.js"]
     },
     {
+        "file": "articles/cants-in-securescreen.php",
+        "type": "article",
+        "page_title": "SecureScreenに実装しようとしても無理ゲーなことの一覧 - TRELLIS WORK",
+        "description": "SecureScreen に寄せられるレビューとか苦情とかのうち無理ゲーなこととその理由について。",
+        "lastmod": "2019/03/12"
+    },
+    {
         "file": "errdocs/403.php",
         "type": "regular",
         "page_title": "Forbidden - TRELLIS WORK",

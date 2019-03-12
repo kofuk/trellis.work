@@ -1,5 +1,9 @@
 [
     {
+        "title": "SecureScreenに実装しようとしても無理ゲーなことの一覧",
+        "to": "/articles/cants-in-securescreen.html"
+    },
+    {
         "title": "ウェブサイトをいじった話",
         "to": "/articles/updated-website.html"
     },

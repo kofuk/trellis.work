@@ -56,6 +56,5 @@
   <h2 class="has-expand-thumb" data-expanded="no">MISC</h2>
   <div>
     <img src="https://static.fsf.org/nosvn/associate/crm/2890875.png"><br>
-    FSFのサイトに、高らかに掲げよと書かれていたので掲げておきます。
   </div>
 </div>

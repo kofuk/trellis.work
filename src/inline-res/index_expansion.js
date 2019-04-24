@@ -13,18 +13,7 @@ const initCardExpansion = () => {
         })
 }
 
-const initExpansion = () => {
-    'use strict';
-    const moreButton = document.getElementById('more');
-    const omittedPart = document.getElementById('omitted');
-    moreButton.onclick = () => {
-        moreButton.style.display = 'none';
-        omittedPart.style.display = 'block';
-    };
-}
-
 addEventListener('load', () => {
     'use strict';
-    initExpansion();
     initCardExpansion();
 });

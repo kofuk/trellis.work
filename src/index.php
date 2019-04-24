@@ -1,23 +1,19 @@
 <div class="card">
   <h2>ABOUT</h2>
-  <div id="about-avatar">
+  <p>
     <img
         data-src="https://assets.trellis.work/images/icon_192.png"
         data-delayed="true"
+        align="left"
         id="avatar">
-  </div>
-  <div class="description" id="about-description">
     こんにちは。<br>
     このサイトは KoFuk の個人的なウェブサイトです。
-    <span id="more" class="more">もっと見る</span>
-    <div id="omitted">
-      ここ 3 年間は主に Chronoscope というグループを作って活動していたので、もし、興味がおありでしたら
-      <a href="https://www.chronoscoper.com" class="inline">プロジェクトのウェブサイト</a> をご覧ください。<br>
-      で、折角「もっと見る」みたいな機能つけてここで終わりというのもどうかと思うんですよ。
-      余談 (?) ですが、こういう調子で他の記事なども書いていくので口調が
-      癪に障るって人はあまり期待しないでください……。
-    </div>
-  </div>
+    ここ 3 年間は主に Chronoscope というグループを作って活動していたので、もし、興味がおありでしたら
+    <a href="https://www.chronoscoper.com" class="inline">プロジェクトのウェブサイト</a> をご覧ください。<br>
+    で、折角「もっと見る」みたいな機能つけてここで終わりというのもどうかと思うんですよ。
+    余談 (?) ですが、こういう調子で他の記事なども書いていくので口調が
+    癪に障るって人はあまり期待しないでください……。
+  </p>
 </div>
 <div class="card">
   <h2>BLOG POSTS</h2>

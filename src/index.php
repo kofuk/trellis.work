@@ -49,6 +49,7 @@
   <h2 class="has-expand-thumb" data-expanded="no">CLONE WITH GIT</h2>
   <div>
     <pre class="console">$ git clone https://github.com/kofuk/trellis.work.git</pre>
+    同じURLにアクセスすることでリポジトリをブラウザで閲覧できます。(GitHubだし当たり前だよなぁ)<br>
     最適化厨になったりカスタマイズ厨になったりするので実際にサーブできるようになるまで
     面倒臭くなったりします。<br>
   </div>
